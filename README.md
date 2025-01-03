@@ -1,4 +1,3 @@
-Maşın Öyrənməsindən istifadə edərək çatışmayan nüvə məlumatlarının proqnozlaşdırılması
 Burada maşın öyrənmə üsullarından istifadə edərək B(E2) kimi xüsusiyyətlər, deformasiya parametrləri və əlaqəli səhvlər daxil olmaqla, çatışmayan nüvə məlumatlarını proqnozlaşdırmaq üçün istifadə olunan prosesi təsvir edəcəyik. 
 Məlumatlar dəstinin araşdırılması:
 Xüsusiyyətlər: (Z) (atom sayı), (N) (neytron sayı), (A) (kütlə sayı), (E(keV)) və digər xüsusiyyətlər;
