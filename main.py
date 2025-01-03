@@ -18,6 +18,13 @@ missing_summary = sheet_data.isnull().sum()
 # Hər sütun üçün çatışmayan dəyərlərin faizini hesablayırıq
 missing_percentage = (missing_summary / len(sheet_data)) * 100
 
+missing_info = pd.DataFrame({
+    'Missing Values': missing_summary,
+    'Percentage (%)': missing_percentage
+}).sort_values(by='Missing Values', ascending=False)
+
+missing_info
+
 # Lazım olan kitabxanaları yükəyirik
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.impute import SimpleImputer
@@ -68,38 +75,3 @@ for target in target_columns:
 # Yenilənmiş məlumarı yadda saxlayırıq
 updated_data.to_excel('complete_dataset_with_predictions.xlsx', index=False)
 print("Predicted all missing values. Updated dataset saved as 'complete_dataset_with_predictions.xlsx'.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Combine into a summary table
-missing_info = pd.DataFrame({
-    'Missing Values': missing_summary,
-    'Percentage (%)': missing_percentage
-}).sort_values(by='Missing Values', ascending=False)
-
-missing_info
